@@ -1,4 +1,3 @@
-﻿<!doctype html>
 <html manifest="psw4.manifest">
 <Style>
 @font-face {
@@ -199,6 +198,11 @@ h1 {
 }
 </Style>
 
+		<script>
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="";};
+			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Instalacon Korrecta!";setTimeout(function(){document.getElementById("progress").innerHTML="Ya puedes Deskonectar de la Red y Reabrir la pagina!"; }, 1500);};
+		</script>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
