@@ -1,4 +1,4 @@
-<html manifest="psw4.manifest">
+<html>
 <Style>
 @font-face {
   font-family: logofont;
@@ -1692,9 +1692,4 @@ window.ref_mem = function(p, sz)
 }
 </script>
 </body>
-		<script>
-			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="";};
-			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Instalacon Korrecta!";setTimeout(function(){document.getElementById("progress").innerHTML="Ya puedes Deskonectar de la Red y Reabrir la pagina!"; }, 1500);};
-		</script>
 </html>
